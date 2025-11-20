@@ -10,3 +10,6 @@ STR:
 2. Create a new html file inside of pages folder called about.html
 3. Create a url to link the AboutPageView
 4. Test it! Run the server and modify the address bar to localhost:8000/about/
+
+
+# Mini Challenge 2 - Update About page to DTL

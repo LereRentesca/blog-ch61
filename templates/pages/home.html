@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>Home Page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo minima voluptatum illum consectetur nam nihil voluptate corporis, ipsum quod vitae, mollitia, et dolor perspiciatis maxime alias nesciunt consequatur. Aliquam iure praesentium sint dolorum repudiandae debitis velit, voluptatibus sit enim natus in beatae tenetur maxime voluptas deleniti minima mollitia ad eaque facilis ipsum animi veritatis? Pariatur quasi praesentium esse enim ipsam voluptas rem magnam omnis, aspernatur quae. Sint mollitia similique recusandae accusamus, itaque quae nisi!</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Home Page View</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fuga similique ab vel iusto. Ipsum, odio! Eaque vitae, unde aliquam exercitationem veniam corrupti incidunt corporis, provident eos aut quo doloribus optio voluptatem cupiditate perspiciatis at impedit! Tempore, voluptatibus eligendi! Tempore saepe beatae aspernatur unde. Optio, alias quia molestias hic ipsum minima quisquam. Ipsa accusantium cumque fugiat, rerum distinctio veniam quisquam totam dolores placeat voluptatibus ab tempore natus inventore, molestias aperiam atque quasi ratione. Sequi facere sunt molestias?</p>    
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
