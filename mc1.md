@@ -13,3 +13,15 @@ STR:
 
 
 # Mini Challenge 2 - Update About page to DTL
+
+# Mini Challenge 3 - Creation of models
+Create a Post model with the following attributes:
+- title
+- subtitle
+- body
+- created_on
+- author
+- image (optional)
+
+Once the model is created, make sure to create the migration file and then display the model in the admin 
+site

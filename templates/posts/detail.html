@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Post Detail
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light">
+                <h1 class="card-title">{{ single_post.title }}</h1>
+                <h5 class="card-subtitle text-muted">{{ single_post.subtitle }}</h5>
+            </div>
+            <div class="card-body">
+                <p class="text-secondary">{{ single_post.description }}</p>
+                <hr>
+                <div class="post-body">
+                    {{ single_post.body | safe }}
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between text-muted">
+                <small>Created on: {{ single_post.created_on|date:"F d, Y \a\t H:i A" }}</small>
+                <small>Status: {{ single_post.status }}</small>
+                <small>By: {{ single_post.author.username }}</small>
+            </div>
+            {% if user.is_authenticated and user == single_post.author %}
+            <div class="mt-4 d-flex justify-content-end gap-2">
+                <a href="{% url 'post_update' single_post.id %}" class="btn btn-outline-primary">
+                    ✏️ Edit
+                </a>
+                <a href="{% url 'post_delete' single_post.id %}" class="btn btn-outline-danger">
+                    🗑️ Delete
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
